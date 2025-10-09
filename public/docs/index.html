@@ -4,55 +4,93 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>the beepiest ever</title>
+		<title>0xC74E’s manual</title>
 		<link rel="icon" href="/img/favicon.png">
 		<link href="/style.css" rel="stylesheet" type="text/css" media="all" title="Default">
 		<style>
 
 			body {
-				background-color: #1d050e;
-				text-align: center;
-				
+				background-color: black;
 			}
 
-			.light {
-				color: #c98ea4;
-				font-style: italic;
-				font-size: smaller;
+			header {
+				padding: 4em 3em 3em;
+				min-height: 128px;
+				background-color: #3c071b;
+				background-image: url(/img/emblem_clean.svg);
+				background-repeat: no-repeat;
+				background-position: calc(100% + 48px) 72px;
+				background-size: 256px;
+				position: relative;
 			}
+
+			header p {
+				margin: 4px 0 0;
+			}
+
+			header .dollcode {
+				color: salmon;
+				position: absolute;
+				right: 3em;
+				top: 2em;
+				font-size: 16px;
+				font-family: monospace;
+				padding: 3px 6px;
+			}
+
+
 
 			.title {
-				background-color: #3c071b;
-				max-width: 60em;
-				margin: 100px auto;
-				padding: 32px;
-				box-shadow: 0 0 50px #3c071b;
+				line-height: 0.75;
+				margin: 0;
 			}
 
+			.updated {
+				font-weight: bold;
+				color: salmon;
+			}
 
-			.spinit {
-				image-rendering: pixelated; 
+			.salmon {
+				color: salmon;
+			}
+
+			@media (max-width: 640px) {
+				header {
+					height: 256px;
+					padding: 5em 3em 3em;
+					background-position: calc(100% + 48px) 172px;
+				}
 			}
 
 		</style>
+	
 	</head>
+
+	
 
 	<body>
 
+	<a href="/" class="home">« back to c74e.fyi</a>
+	<header>
+		<span class="dollcode">▘▖▖▌▘▘▘▖▌▖</span>
+		<h1 class="title">the 0xC74E<br>operating manual</h1>
+		<p>documentation about the very cute robot 0xC74E 'chicory'.</p>
+		<p class="updated">last updated <time datetime="2025-10-08">2025-10-08</time></p>
+	</header>
 
+		
+		<p>very wip (there's literally nothing here yet)</p>
+		<p>but basically, 0xC74E is a robot :3</p>
+		<ul>
+			<li>it uses [it/its, she/her] pronouns mainly</li>
+			<li>it sometimes uses third person pronouns to refer to itself</li>
+			<li>silly version number: <data value="0.18.2">0.18.2</data></li>
+			<li>it beeps.</li>
+			<li>beep!</li>
+		</ul>
 
-		<div class="title">
-			
-			<h1>this is where the manual will be</h1>
-			<img class="spinit" src="/img/profile.png" alt="c74e looks at the reader" title="beep!">
-			
-			<p>this is where the manual that specifies the operation of 0xC74E “chicory” will be. it is not currently complete. it will be published here once it is ready for viewing. beep!</p>
-	
-	
-	
-		</div>
-
-		<p class="light">the mrrower :3c</p>
+		<p class="comment">y'know it should probably figure out a static site generator because updating its version number across everything will be Painful</p>
+		
 
 	</body>
 
