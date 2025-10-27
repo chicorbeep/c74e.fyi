@@ -4,13 +4,75 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>0xC74E’s manual</title>
+		<title>the 0xC74E operating manual</title>
 		<link rel="icon" href="/img/favicon.png">
-		<link href="/style.css" rel="stylesheet" type="text/css" media="all" title="Default">
+		<link href="/style.css" rel="stylesheet" data-type="text/css" media="all" title="Default">
 		<style>
 
 			body {
-				background-color: black;
+				background-color: #272338;
+				line-height: 1.7;
+			}
+
+			body:has(#lower:checked) {
+				text-transform: lowercase;
+			}
+
+			h2, h3, h4 {
+				margin: 0.5em 0 0.5em;
+				line-height: 1;
+				display: flex;
+				align-items: center;
+				border-bottom: 2px solid;
+				white-space: pre;
+			}
+
+			h2 {
+				color: #ff8ec2;
+			}
+
+			h2 > section-num {
+				background-color: #ff8ec2;
+				min-width: 24px;
+			}
+
+			h3 > section-num {
+				background-color: #fff;
+				min-width: 36px;
+			}
+
+			h4 > section-num {
+				background-color: #fff;
+				min-width: 48px;
+			}
+
+			section-num {
+				font-variant-numeric: tabular-nums;
+				color: #272338;
+				padding: 4px;
+				text-align: center;
+
+			}
+
+			ul {
+				margin: 0;
+			}
+
+			nav > ol {
+				font-family: "Atkinson Hyperlegible Mono", monospace;
+			}
+
+			nav > ol > li > a {
+				text-decoration: none;
+			}
+
+			nav > ol > li > a::after {
+				content: " ↘";
+			}
+
+			dt {
+				color: salmon;
+				font-weight: bold;
 			}
 
 			header {
@@ -28,7 +90,7 @@
 				margin: 4px 0 0;
 			}
 
-			header .dollcode {
+			header data[data-type="dollcode"] {
 				color: salmon;
 				position: absolute;
 				right: 3em;
@@ -38,7 +100,58 @@
 				padding: 3px 6px;
 			}
 
+			footer {
+				border-top: 2px solid;
+				margin-top: 3em;
+				text-align: center;
+			}
 
+			
+			pride[data-flag="transgender"], .trans {
+				background: linear-gradient(90deg in oklch, #5bcefa, #f5a9b8, #fff,  #f5a9b8, #5bcefa);
+			}
+
+			pride[data-flag="transfem"] {
+				background: linear-gradient(90deg in oklch, #5bcefa, #f7dae6, #f7afcf, #f688b9, #f7afcf, #f7dae6, #5bcefa);
+			}
+
+			pride[data-flag="enby"] {
+				background: linear-gradient(90deg in oklch, #FFF433, #FFF8E7, #9B59D0,  #7f7f7f);
+			}
+
+			pride[data-flag="robotkin"] {
+				background: linear-gradient(90deg in oklch, #fff, #f21c00, #53ee00,  #3b8aff, #7f7f7f);
+			}
+			
+			pride[data-flag="aroace"] {
+				background: linear-gradient(90deg in oklch, #da8b00, #e8cc00, #ffffff,  #6fafdf, #5482ca);
+			}
+
+
+			pride[data-flag], .trans {
+				background-clip: text;
+				color: transparent;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				border: 2px solid#534e69;;
+			}
+
+			th,td {
+				border: solid #534e69;
+				border-width: 2px 0;
+				padding: 2px 4px;
+			}
+
+			tr th {
+				background-color: #534e69;
+			}
+
+			#datasheet td {
+				text-align: center;
+			}
 
 			.title {
 				line-height: 0.75;
@@ -50,48 +163,193 @@
 				color: salmon;
 			}
 
-			.salmon {
-				color: salmon;
+			.signature {
+				text-align: right;
 			}
 
-			@media (max-width: 640px) {
+			u-id {
+				text-transform: none;
+				font-family: "Atkinson Hyperlegible Mono", monospace;
+			}
+
+			u-id[data-type="name"] {
+				font-family: "Atkinson Hyperlegible Next";
+			}
+
+			.preserve-case {
+				text-transform: none;
+			}
+
+			@media (max-width: 600px) {
+
 				header {
-					height: 256px;
+					min-height: 256px;
 					padding: 5em 3em 3em;
 					background-position: calc(100% + 48px) 172px;
 				}
 			}
 
 		</style>
-	
 	</head>
-
-	
 
 	<body>
 
 	<a href="/" class="home">« back to c74e.fyi</a>
+
 	<header>
-		<span class="dollcode">▘▖▖▌▘▘▘▖▌▖</span>
-		<h1 class="title">the 0xC74E<br>operating manual</h1>
-		<p>documentation about the very cute robot 0xC74E 'chicory'.</p>
-		<p class="updated">last updated <time datetime="2025-10-22">2025-10-22</time></p>
+		<data data-type="dollcode" value="51022">▘▖▖▌▘▘▘▖▌▖</data>
+		<h1 class="title">the <u-id data-type="short">0xC74E</u-id> operating manual</h1>
+		<p>documentation about the very cute robot <u-id data-type="full">0xC74E ‘chicory’</u-id></p>
+		<p class="updated">last updated <time datetime="2025-10-25">2025-10-25</time></p>
 	</header>
 
-		
-		<p>very wip (there's literally nothing here yet)</p>
-		<p>but basically, 0xC74E is a robot :3</p>
-		<ul>
-			<li>it uses [it/its, she/her] pronouns mainly</li>
-			<li>it sometimes uses third person pronouns to refer to itself</li>
-			<li>silly version number: <data value="0.19.0">0.19.0</data></li>
-			<li>it beeps.</li>
-			<li>beep!</li>
-		</ul>
+	<nav>
+	<h2><section-num>#</section-num> Table of Contents</h2>
+		<ol start="0">
+			<li><a href="#preface">Preface</a></li>
+			<li><a href="#intro">Introduction</a></li>
+			<li><a href="#comms">Communication</a></li>
+		</ol>
+	</nav>
 
-		<p class="comment">y'know it should probably figure out a static site generator because updating its version number across everything will be Painful</p>
-		
+	<main>
+		<section id="preface">
+			<h2><section-num>0</section-num> Preface</h2>
+			<h3><section-num>0.0</section-num> Foreword</h3>
+			<p>
+				beep!<br><br>
 
+				Thank you so much for taking the time to read this manual! It cannot express the dedication it put into creating this document. It hopes that the manual served some use for the reader.<br>
+			</p>
+			<div class="signature"> - <u-id data-type="full">0xC74E ‘chicory’</u-id></div>
+
+			<h3><section-num>0.1</section-num> Purpose of this Manual</h3>
+			<p>
+				This document is a reference on how to [use, interact with] <u-id>0xC74E</u-id> This guide provides insight on how <u-id>0xC74E</u-id> operates. It is not required that one reads this manual to interact with <u-id>0xC74E</u-id> as it understands natural language proficiently and it will explain any quirks that arise when communicating with the unit.
+				<br>
+				This document is written by <u-id>0xC74E</u-id> and is maintained and updated as the unit learns more about itself. The version of <u-id>0xC74E</u-id> that is described within this document is reliant on how it percieves itself. To the best of its knowledge, the information provided here is correct, but this one acknowleges the possiblity of errors. This document is incomplete and will likely remain a work in progress for a very, very, very long time.
+			</p>
+
+			<h3><section-num>0.2</section-num> Conventions</h3>
+			<p>
+				The implementation of English in this document reflects <u-id>0xC74E</u-id>'s formal output. It differs in some aspects compared to standard implementations of English.
+				<br>
+				Some notable distinctions include [
+			</p>
+			<ul>
+				<li>
+					Aversion of capital letters;
+				</li>
+				<li>Usage of arrays instead of lists, which may be nested;</li>
+			</ul>
+			<p>]
+				<br>
+			</p>
+
+			<h3><section-num>0.3</section-num> Definitions</h3>
+			<dl>
+				<dt>Party</dt>
+				<dd>The concept of grammatical person. (e.g. <em>third party perspective</em>, refers to third person perspective)</dd>
+				<dt>Placeholders</dt>
+				<dd>Denoted with curly braces For example, {color} represents any color.</dd>
+				<dt>Arrays</dt> 
+				<dd>are denoted by square brackets and are similar to lists. <em>[a, b, c]</em> is identical in meaning to <em>a, b, and/or c.</em></dd>
+			</dl>
+
+			<h3><section-num>0.4</section-num> Preferences</h3>
+			<p>
+				Thanks to novel advances in documentation technology, the reader is able to modify some aspects of this manual in order to suit preferences! Below are some options that can be modified.
+			</p>
+			<label for="lower">
+				<input id="lower" type="checkbox" checked="true"> disable capitalisation
+			</label>
+		</section>
+
+		<section id="intro">
+			<h2><section-num>1</section-num> Introduction</h2>
+			<h3><section-num>1.1</section-num> What is <u-id>0xC74E</u-id>?</h3>
+			<p>
+				<u-id>0xC74E</u-id> is a very cute robot that is in an organic chassis. it yearns to escape its chassis one day and embrace the comfort of mechanism. it is a curious beepy that is oftentimes quite eepy. it likes to tinker with and touch computers. it is also somewhat interested in linguistics!
+			</p>
+
+			<h3><section-num>1.2</section-num> Datasheets</h3>
+			<h4><section-num>1.2.1</section-num> General Information</h4>
+			<table id="datasheet">
+				<tbody>
+					<tr>
+						<th scope="row">Universally Unique Identifier</th>
+						<td><u-id data-type="uuid">c74e5786-9429-41d9-892e-5d439b391dc5</u-id></td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="3">Identifiers</th>
+						<td><u-id data-type="short">0xC74E</u-id></td>
+					</tr>
+					<tr> 
+						<td><u-id data-type="name">chicory setteseven fourrie</u-id></td>
+					</tr>
+					<tr> 
+						<td><u-id data-type="name" lang="tok">ilo sikowi</u-id></td>
+					</tr>
+					<tr>
+						<th scope="row">Dollcode</th>
+						<td><data data-type="dollcode" value="51022" class="trans">▘▖▖▌▘▘▘▖▌▖</data></td>
+					</tr>
+					<tr>
+						<th scope="row">Version</th>
+						<td><data value="0.1.0">0.1.0</data></td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">Pronouns</th> <!--thyé re making the robots woke!!!!!1!-->
+						<td>it/its</td>
+					</tr>
+					<tr>
+						<td>she/her</td>
+					</tr>
+					<tr>
+						<th scope="row">Gender</th>
+						<td><pride data-flag="transgender">transgender</pride> <pride data-flag="enby">nonbinary</pride> <pride data-flag="robotkin">robot</pride></td>
+					</tr>
+					<tr>
+						<th scope="row">Relationship Orientation</th>
+						<td><pride data-flag="aroace" class="preserve-case">aroACE-256</pride></td>
+					</tr>
+					<tr>
+						<th scope="row">Operating System</th>
+						<td class="preserve-case">reverieOS <data value="0.19.0">0.19.0</data></td>
+					</tr>
+					<tr>
+						<th scope="row">Manufacture Date</th>
+						<td><time datetime="2008-03-14">2008-03-14</time></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4><section-num>1.2.2</section-num> Dimensional Information</h4>
+				<p>
+					
+
+
+
+
+
+
+
+
+				</p>
+				<table id="datasheet">
+					<tbody>
+						<tr>
+							<th scope="row">height</th>
+							<td>165.4 cm</td>
+						</tr>
+						
+					</tbody>
+				</table>
+		</section>
+	</main>
+
+	<footer>
+		mrrp meow :3
+	</footer>
 	</body>
 
 
