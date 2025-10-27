@@ -1,0 +1,169 @@
+:root {
+	--background: #272338;
+	--text-color: #fff;
+	--accent-pri: #ff8ec2;
+	--accent-sec: salmon;
+	--table-light: oklch(from var(--background) calc(l + 0.15) c h);
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text-color);
+	line-height: 1.7;
+
+	&:has(#lower:checked) {
+		text-transform: lowercase;
+	}
+}
+
+h2,
+h3,
+h4 {
+	margin: 0.5em 0 0.5em;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid;
+	white-space: pre;
+}
+
+h2 {
+	color: var(--accent-pri);
+
+	&>section-num {
+		background-color: var(--accent-pri);
+		min-width: 24px;
+	}
+}
+
+h3>section-num,
+#changelog h3 time {
+	background-color: var(--text-color);
+	min-width: 36px;
+}
+
+h4>section-num {
+	background-color: var(--text-color);
+	min-width: 48px;
+}
+
+section-num,
+#changelog h3 time {
+	font-variant-numeric: tabular-nums;
+	color: var(--background);
+	padding: 4px;
+	text-align: center;
+}
+
+header {
+	background: url(/img/emblem_clean.svg) no-repeat calc(100% + 48px) 72px/256px #3c071b;
+	padding: 4em 3em 3em;
+	min-height: 128px;
+	position: relative;
+
+	&>p {
+		margin: 4px 0 0;
+	}
+
+	&>data[data-type="dollcode"] {
+		color: var(--accent-sec);
+		position: absolute;
+		right: 3em;
+		top: 2em;
+		font-size: 16px;
+		font-family: monospace;
+		padding: 3px 6px;
+	}
+}
+
+.title {
+	line-height: 0.75;
+	margin: 0;
+}
+
+.updated {
+	font-weight: bold;
+	color: var(--accent-sec);
+}
+
+ul,
+ol {
+	margin: 0;
+}
+
+nav>ol {
+	font-family: "Atkinson Hyperlegible Mono", monospace;
+
+	&>li>a {
+		text-decoration: none;
+
+		&::after {
+			content: " ↘";
+		}
+	}
+}
+
+.appendix {
+	list-style-type: upper-alpha;
+}
+
+.signature {
+	text-align: right;
+}
+
+dt {
+	color: var(--accent-sec);
+	font-weight: bold;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid var(--table-light);
+
+	& th,
+	& td {
+		border: solid var(--table-light);
+		border-width: 2px 0;
+		padding: 2px 4px;
+	}
+
+	& tr th {
+		background-color: var(--table-light);
+	}
+}
+
+#datasheet td {
+	text-align: center;
+}
+
+.preserve-case,
+section-num,
+code {
+	text-transform: none;
+}
+
+#changelog h3>section-num {
+	min-width: calc(24px * 2.5);
+}
+
+#changelog h3>time {
+	min-width: 132px;
+	margin-left: auto;
+}
+
+footer {
+	border-top: 2px solid;
+	margin-top: 3em;
+	text-align: center;
+}
+
+@media (max-width: 600px) {
+	header {
+		min-height: 256px;
+		padding: 5em 3em 3em;
+		background-position: calc(100% + 48px) 172px;
+	}
+}
+
+/* if you see this sign caterpillar in the guestbook */

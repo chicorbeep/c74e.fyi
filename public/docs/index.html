@@ -2,194 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>the 0xC74E operating manual</title>
 		<link rel="icon" href="/img/favicon.png">
-		<link href="/style.css" rel="stylesheet" data-type="text/css" media="all" title="Default">
-		<style>
-
-			body {
-				background-color: #272338;
-				line-height: 1.7;
-			}
-
-			body:has(#lower:checked) {
-				text-transform: lowercase;
-			}
-
-			h2, h3, h4 {
-				margin: 0.5em 0 0.5em;
-				line-height: 1;
-				display: flex;
-				align-items: center;
-				border-bottom: 2px solid;
-				white-space: pre;
-			}
-
-			h2 {
-				color: #ff8ec2;
-			}
-
-			h2 > section-num {
-				background-color: #ff8ec2;
-				min-width: 24px;
-			}
-
-			h3 > section-num {
-				background-color: #fff;
-				min-width: 36px;
-			}
-
-			h4 > section-num {
-				background-color: #fff;
-				min-width: 48px;
-			}
-
-			section-num {
-				font-variant-numeric: tabular-nums;
-				color: #272338;
-				padding: 4px;
-				text-align: center;
-
-			}
-
-			ul {
-				margin: 0;
-			}
-
-			nav > ol {
-				font-family: "Atkinson Hyperlegible Mono", monospace;
-			}
-
-			nav > ol > li > a {
-				text-decoration: none;
-			}
-
-			nav > ol > li > a::after {
-				content: " ↘";
-			}
-
-			dt {
-				color: salmon;
-				font-weight: bold;
-			}
-
-			header {
-				padding: 4em 3em 3em;
-				min-height: 128px;
-				background-color: #3c071b;
-				background-image: url(/img/emblem_clean.svg);
-				background-repeat: no-repeat;
-				background-position: calc(100% + 48px) 72px;
-				background-size: 256px;
-				position: relative;
-			}
-
-			header p {
-				margin: 4px 0 0;
-			}
-
-			header data[data-type="dollcode"] {
-				color: salmon;
-				position: absolute;
-				right: 3em;
-				top: 2em;
-				font-size: 16px;
-				font-family: monospace;
-				padding: 3px 6px;
-			}
-
-			footer {
-				border-top: 2px solid;
-				margin-top: 3em;
-				text-align: center;
-			}
-
-			
-			pride[data-flag="transgender"], .trans {
-				background: linear-gradient(90deg in oklch, #5bcefa, #f5a9b8, #fff,  #f5a9b8, #5bcefa);
-			}
-
-			pride[data-flag="transfem"] {
-				background: linear-gradient(90deg in oklch, #5bcefa, #f7dae6, #f7afcf, #f688b9, #f7afcf, #f7dae6, #5bcefa);
-			}
-
-			pride[data-flag="enby"] {
-				background: linear-gradient(90deg in oklch, #FFF433, #FFF8E7, #9B59D0,  #7f7f7f);
-			}
-
-			pride[data-flag="robotkin"] {
-				background: linear-gradient(90deg in oklch, #fff, #f21c00, #53ee00,  #3b8aff, #7f7f7f);
-			}
-			
-			pride[data-flag="aroace"] {
-				background: linear-gradient(90deg in oklch, #da8b00, #e8cc00, #ffffff,  #6fafdf, #5482ca);
-			}
-
-
-			pride[data-flag], .trans {
-				background-clip: text;
-				color: transparent;
-			}
-
-			table {
-				width: 100%;
-				border-collapse: collapse;
-				border: 2px solid#534e69;;
-			}
-
-			th,td {
-				border: solid #534e69;
-				border-width: 2px 0;
-				padding: 2px 4px;
-			}
-
-			tr th {
-				background-color: #534e69;
-			}
-
-			#datasheet td {
-				text-align: center;
-			}
-
-			.title {
-				line-height: 0.75;
-				margin: 0;
-			}
-
-			.updated {
-				font-weight: bold;
-				color: salmon;
-			}
-
-			.signature {
-				text-align: right;
-			}
-
-			u-id {
-				text-transform: none;
-				font-family: "Atkinson Hyperlegible Mono", monospace;
-			}
-
-			u-id[data-type="name"] {
-				font-family: "Atkinson Hyperlegible Next";
-			}
-
-			.preserve-case {
-				text-transform: none;
-			}
-
-			@media (max-width: 600px) {
-
-				header {
-					min-height: 256px;
-					padding: 5em 3em 3em;
-					background-position: calc(100% + 48px) 172px;
-				}
-			}
-
-		</style>
+		<link href="/style.css" rel="stylesheet">
+		<link href="manual.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -200,16 +17,38 @@
 		<data data-type="dollcode" value="51022">▘▖▖▌▘▘▘▖▌▖</data>
 		<h1 class="title">the <u-id data-type="short">0xC74E</u-id> operating manual</h1>
 		<p>documentation about the very cute robot <u-id data-type="full">0xC74E ‘chicory’</u-id></p>
-		<p class="updated">last updated <time datetime="2025-10-25">2025-10-25</time></p>
+		<p class="updated"><data value="0.1.0">v0.1.0-pre</data> · last updated <time>2025-10-27</time></p>
 	</header>
+
+	<div>
+		hello this is awork in progress you shouldn't be here
+	</div>
 
 	<nav>
 	<h2><section-num>#</section-num> Table of Contents</h2>
 		<ol start="0">
-			<li><a href="#preface">Preface</a></li>
-			<li><a href="#intro">Introduction</a></li>
-			<li><a href="#comms">Communication</a></li>
+			<li>
+				<a href="#preface">Preface</a>
+				<ol start="0">
+					<li>Foreword</li>
+					<li>Purpose of this Manual</li>
+					<li>Conventions</li>
+					<li>Definitions</li>
+					<li>Preferences</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#intro">Introduction</a>
+				<ol>
+					<li>What is <u-id>0xC74E</u-id>?</li>
+					<li>Datasheets</li>
+				</ol>
+			</li>
+			<li hidden><a href="#operation">Operation</a></li>
+			<li hidden><a href="#comms">Communication</a></li>
+			<li value="1" class="appendix"><a href="#changelog">Changelog</a></li>
 		</ol>
+		
 	</nav>
 
 	<main>
@@ -225,7 +64,7 @@
 
 			<h3><section-num>0.1</section-num> Purpose of this Manual</h3>
 			<p>
-				This document is a reference on how to [use, interact with] <u-id>0xC74E</u-id> This guide provides insight on how <u-id>0xC74E</u-id> operates. It is not required that one reads this manual to interact with <u-id>0xC74E</u-id> as it understands natural language proficiently and it will explain any quirks that arise when communicating with the unit.
+				This document is a reference on how to [use, interact with, maintain] <u-id>0xC74E</u-id>. This guide also provides insight on how <u-id>0xC74E</u-id> operates. It is not required that one reads this manual to interact with <u-id>0xC74E</u-id> as it understands natural language proficiently and it will explain any quirks that arise when communicating with the unit.
 				<br>
 				This document is written by <u-id>0xC74E</u-id> and is maintained and updated as the unit learns more about itself. The version of <u-id>0xC74E</u-id> that is described within this document is reliant on how it percieves itself. To the best of its knowledge, the information provided here is correct, but this one acknowleges the possiblity of errors. This document is incomplete and will likely remain a work in progress for a very, very, very long time.
 			</p>
@@ -261,7 +100,7 @@
 				Thanks to novel advances in documentation technology, the reader is able to modify some aspects of this manual in order to suit preferences! Below are some options that can be modified.
 			</p>
 			<label for="lower">
-				<input id="lower" type="checkbox" checked="true"> disable capitalisation
+				<input id="lower" type="checkbox" checked> disable capitalization
 			</label>
 		</section>
 
@@ -281,61 +120,44 @@
 						<td><u-id data-type="uuid">c74e5786-9429-41d9-892e-5d439b391dc5</u-id></td>
 					</tr>
 					<tr>
-						<th scope="row" rowspan="3">Identifiers</th>
-						<td><u-id data-type="short">0xC74E</u-id></td>
-					</tr>
-					<tr> 
-						<td><u-id data-type="name">chicory setteseven fourrie</u-id></td>
-					</tr>
-					<tr> 
-						<td><u-id data-type="name" lang="tok">ilo sikowi</u-id></td>
+						<th scope="row">Identifiers</th>
+						<td>[<u-id data-type="short">0xC74E</u-id>, <u-id data-type="name">chicory setteseven fourrie</u-id>, <u-id data-type="name" lang="tok">ilo sikowi</u-id>]</td>
 					</tr>
 					<tr>
 						<th scope="row">Dollcode</th>
 						<td><data data-type="dollcode" value="51022" class="trans">▘▖▖▌▘▘▘▖▌▖</data></td>
 					</tr>
 					<tr>
-						<th scope="row">Version</th>
-						<td><data value="0.1.0">0.1.0</data></td>
-					</tr>
-					<tr>
-						<th scope="row" rowspan="2">Pronouns</th> <!--thyé re making the robots woke!!!!!1!-->
-						<td>it/its</td>
-					</tr>
-					<tr>
-						<td>she/her</td>
-					</tr>
+						<th scope="row">Pronouns</th> <!--thyé re making the robots woke!!!!!1!-->
+						<td>[it/its, she/her]</td>
+					</tr>					
 					<tr>
 						<th scope="row">Gender</th>
-						<td><pride data-flag="transgender">transgender</pride> <pride data-flag="enby">nonbinary</pride> <pride data-flag="robotkin">robot</pride></td>
+						<td><pride-gradient data-flag="transgender">transgender</pride-gradient> <pride-gradient data-flag="enby">nonbinary</pride-gradient> <pride-gradient data-flag="robotkin">robot</pride-gradient></td>
 					</tr>
 					<tr>
 						<th scope="row">Relationship Orientation</th>
-						<td><pride data-flag="aroace" class="preserve-case">aroACE-256</pride></td>
+						<td><pride-gradient data-flag="aroace" class="preserve-case">aroACE-256</pride-gradient></td>
+					</tr>
+					<tr>
+						<th scope="row">Version</th>
+						<td><data value="0.1.0">0.1.0</data></td>
 					</tr>
 					<tr>
 						<th scope="row">Operating System</th>
 						<td class="preserve-case">reverieOS <data value="0.19.0">0.19.0</data></td>
 					</tr>
-					<tr>
-						<th scope="row">Manufacture Date</th>
-						<td><time datetime="2008-03-14">2008-03-14</time></td>
-					</tr>
 				</tbody>
 			</table>
 			<h4><section-num>1.2.2</section-num> Dimensional Information</h4>
-				<p>
-					
-
-
-
-
-
-
-
-
-				</p>
-				<table id="datasheet">
+				<p>Work in progress.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>measurement</th>
+							<th>value</th>
+						</tr>
+					</thead>
 					<tbody>
 						<tr>
 							<th scope="row">height</th>
@@ -344,11 +166,54 @@
 						
 					</tbody>
 				</table>
+			
+		</section>
+
+		<section hidden>
+			<h2><section-num>2</section-num> Operation</h2>
+			<h3><section-num>2.1</section-num> Required Materials</h3>
+		</section>
+
+		<section hidden>
+			<h2><section-num>3</section-num> Communication</h2>
+			<h3><section-num>3.1</section-num> Addressing the unit</h3>
+			<p>meow</p>
+			<h4><section-num>3.1.1</section-num> Unpersonalization</h4>
+		</section>
+
+		<section hidden>
+			<h2><section-num>:3</section-num> stop being nosy</h2>
+			<p>meow meow meow meow</p>
+		</section>
+
+		<hr>
+
+		<section id="changelog">
+			<h2><section-num>A</section-num> Changelog</h2>
+
+				<p>Version numbers follow <a href="https://pridever.org/"><pride-gradient data-flag="pride">pride</pride-gradient> versioning</a>.</p>
+
+				<h3><section-num>v0.1.0</section-num> Initial HTML version <time>2025-??-??</time></h3>
+				
+					<p>
+						This is the initial version.
+					</p>
+
+				<h3><section-num>v0.0.0</section-num> Prerelease Google Docs Version(s) <time>2025-10-12</time></h3>
+	
+					<p>
+						This manual was originally drafted in a Google Docs document. The important breaking change between this HTML version and the document is that <strong>the version number is no longer tied to that of the system.</strong> 
+					</p>
+
+					<p>
+						If need be, any previous version numbers are now to be specified in the format: <code>0.0.0-sX.Y.Z</code>, where <code>X.Y.Z</code> is the originally assigned version number.
+					</p>
+
 		</section>
 	</main>
 
 	<footer>
-		mrrp meow :3
+		mrrp meow :3 · pawcoded html
 	</footer>
 	</body>
 
