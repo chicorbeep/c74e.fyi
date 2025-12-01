@@ -26,6 +26,10 @@ a:active {
 	color: #ffbc40;
 }
 
+hr {
+	border: 1px solid white;
+}
+
 
 pre, code, textarea, time, data, u-id {
 	text-transform: none;
@@ -65,13 +69,12 @@ pride-gradient[data-flag], .trans {
 	color: transparent;
 }
 
-
 .buttons img, .buttons {
 	image-rendering: pixelated;
 }
 
-.comment {
-	opacity: 0.5;
+.comment, small {
+	opacity: 0.7;
 }
 
 .home {

@@ -5,7 +5,7 @@
 	--accent-sec: salmon;
 	--accent-tri: #f5cc44;
 	--table-light: oklch(from var(--background) calc(l + 0.2) c h);
-	--text-light: color-mix(in oklch, var(--text-color),var(--background));
+	--text-light: color-mix(in oklch, var(--text-color) 1, var(--background));
 }
 
 body {
@@ -18,11 +18,11 @@ body {
 }
 
 main {
-	counter-reset: section -1;
+	counter-reset: h2-section -1;
 }
 
 hr {
-	border: 1px solid var(--text-color);
+	border-color: var(--accent-pri);
 }
 
 small {
@@ -31,6 +31,7 @@ small {
 
 *:not(img)[title] {
 	cursor: help;
+	text-decoration: 1px dotted underline;
 }
 
 h2, h3, h4 {
@@ -54,29 +55,29 @@ h2, h3, h4 {
 
 h2 {
 	color: var(--accent-pri);
-	counter-increment: section;
-	counter-reset: subsection;
+	counter-increment: h2-section;
+	counter-reset: h3-section;
 	&::before {
-		content: counter(section);
+		content: counter(h2-section);
 		background-color: var(--accent-pri);
 		min-width: 24px;
 	}
 }
 
 h3 {
-	counter-increment: subsection;
-	counter-reset: subsubsection;
+	counter-increment: h3-section;
+	counter-reset: h4-section;
 	&::before {
-		content: counter(section) "." counter(subsection);
+		content: counter(h2-section) "." counter(h3-section);
 		background-color: var(--text-color);
 		min-width: 36px;
 	}
 }
 
 h4 {
-	counter-increment: subsubsection;
+	counter-increment: h4-section;
 	&::before {
-		content: counter(section) "." counter(subsection) "." counter(subsubsection);
+		content: counter(h2-section) "." counter(h3-section) "." counter(h4-section);
 		background-color: var(--text-color);
 		min-width: 48px;
 	}
@@ -87,12 +88,16 @@ h4 {
 	content: "#";
 }
 
+.foreword {
+	counter-reset: h3-section -1;
+}
+
 
 .apx {
-	counter-reset: section;
+	counter-reset: h2-section;
 	
 	& h2::before {
-		content: counter(section, upper-alpha);	
+		content: counter(h2-section, upper-alpha);	
 	}
 
 	& :is(h3, h4)::before {
@@ -129,6 +134,15 @@ doc-notice {
 		border-color: var(--accent-tri);
 	}
  
+}
+
+aside {
+	background: var(--table-light);
+	padding: 1em;
+	float: right;
+	max-width: 400px;
+	font-size: 90%;
+	line-height: 1.3;
 }
 
 header {
@@ -247,6 +261,9 @@ table {
 	text-align: center;
 }
 
+#datasheet tr th {
+	width: 16em;
+}
 
 
 .preserve-case,

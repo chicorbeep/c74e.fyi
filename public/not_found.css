@@ -89,13 +89,13 @@ body {
 }
 
 .vignette {
-	height: 50vh;
+	height: 40vh;
 	width: 200vw;
 	background: transparent;
 	outline: 1000px solid black;
-	border-radius: 1000px;
-	filter: blur(70px);
+	filter: blur(100px);
 	z-index: -9;
+	margin-bottom: 10vh;
 }
 
 .pr-text {
@@ -157,22 +157,6 @@ article {
 	user-select: none;
 }
 
-a {
-	color: #FF9999;
-}
-
-a:visited {
-	color: #ff99cc;
-}
-
-a:focus, a:hover {
-	color: #FF3333;
-}
-
-a:active {
-	color: #ffbc40;
-}
-
 .music {
 	position: absolute;
 	bottom: 1em;
@@ -181,6 +165,7 @@ a:active {
 	& p {
 		font-size: 16px;
 		margin: 0;
+		line-height: 1.5;
 	}
  
 	& audio {
@@ -191,7 +176,6 @@ a:active {
 		transition: 400ms;
 		&:hover {
 			opacity: 1;
-			
 		}
 	}
 

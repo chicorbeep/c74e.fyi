@@ -1,65 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title></title>
-		<link rel="icon" href="/img/favicon.png">
-		<link href="/style.css" rel="stylesheet" type="text/css" media="all" title="Default">
-		<style>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="icon" href="/img/favicon.png">
+	<link href="/style.css" rel="stylesheet" type="text/css" media="all" title="Default">
+	<style>
 
-			#listening {
-				background-color: #320303;
-				padding: 8px 8px 8px 80px;
-				position: relative;
-				min-height: 64px;
-				max-width: 320px;
-			}
+	.about-window {
+		border: 1px solid;
+		padding: 8px;
+		display: flow-root;
+		max-width: 640px;
+		margin: 16px 0 0 auto;
+	}
 
-			#listening h3 {
-				margin: 0;
-				line-height: 0.9;
-			}
-			
-			#listening p {
-				margin: 0;
-			}
+		.titlebar {
+		background-color: white;
+		margin: -8px -8px 8px;
+		padding: 4px 8px;
+		height: 24px;
 
-			#listening img {
-				position: absolute;
-				top: 8px;
-				left: 8px;
-			}
+		color: #320303;
+	}
 
+	.titlebar span {
+		vertical-align: 15%;
+		padding-left: 4px;
+	}
 
+	.about-window > img {
+		float: left;
+		image-rendering: pixelated;
+		margin: -8px 8px -100px -8px;
+	}
 
-		</style>
+	.about-window  :is(h2, p) {
+		margin: 0;
+		padding: 0;
+	}
 
-		<noscript>
-			<style>
-				#listening, #listening-msg {
-					display: none;
-				}
-			</style>
-		</noscript>
-	</head>
-
-	<body>
-
-			<a href="/" class="home">« back</a>
-	
-			<h1>about</h1>
-			
-			<p>It's a girl of some sort</p>
+	.version {
+		vertical-align: 0%;
+		font-size: 70%;
+		font-variant-numeric: tabular-nums;
+	}
 
 
-			<h3 id="listening-msg"></h3>
-			<div id="listening"></div>
 
-			<a href="https://swiftyshq.neocities.org/fun/quiz/eon"><img src="https://swiftyshq.neocities.org/img/quiz/eon/vee8.png" alt="sylveon" title="timid and extroverted, your unpredictable and anxious nature gives you a sense of humor"></a>
 
-			<script src="/js/lastfm.js"></script>
-	</body>
 
+
+
+
+
+
+	#listening {
+		background-color: #320303;
+		padding: 8px 8px 8px 80px;
+		position: relative;
+		min-height: 64px;
+		max-width: 320px;
+	}
+
+	#listening h3 {
+		margin: 0;
+		line-height: 0.9;
+	}
+
+	#listening p {
+		margin: 0;
+	}
+
+	#listening img {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+	}
+
+	</style>
+
+	<noscript><style>
+
+	#listening, #listening-msg {
+		display: none;
+	}
+
+	</style></noscript>
+</head>
+
+<body>
+	<a href="/" class="home">« back</a>
+
+	<h1>about the unit</h1>
+
+	<section class="about-window">
+		<div class="titlebar">
+			<img src="/img/favicon.png" height="16">
+			<span>about 0xC74E</span> 
+
+		</div>
+		<img src="/img/placeholder.png" alt="chicory! it's smiling while sitting on the window frame" width="200" height="400">
+
+		<hgroup>
+			<h2><u-id>0xC74E</u-id> 'chicory' <span class="version">version 0.2.0</span></h2>
+			<p>made with love ♥ 2008 - 2026 Kasije Systems</p>
+		</hgroup>
+		<hr>
+		<p>it's a cute robot :3 awawawawawawa!</p>
+
+		<small>do not the chicory.</small>
+
+	</section>
+
+
+	<h3 id="listening-msg"></h3>
+	<div id="listening"></div>
+
+	<a href="https://swiftyshq.neocities.org/fun/quiz/eon"><img src="https://swiftyshq.neocities.org/img/quiz/eon/vee8.png" alt="sylveon" title="timid and extroverted, your unpredictable and anxious nature gives you a sense of humor"></a>
+
+	<script src="/js/lastfm.js"></script>
+</body>
 
 </html>
