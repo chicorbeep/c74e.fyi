@@ -30,43 +30,57 @@ hr {
 	border: 1px solid white;
 }
 
-
 pre, code, textarea, time, data, u-id {
 	text-transform: none;
 	font-family: "Atkinson Hyperlegible Mono", monospace;
 }
 
-u-id[data-type="name"] {
+u-id[type="name"] {
 	font-family: "Atkinson Hyperlegible Next", sans-serif;
 }
 
-pride-gradient[data-flag="pride"] {
+u-id[type="full"]> span {
+	font-family: "Atkinson Hyperlegible Next", sans-serif;
+}
+
+/* It's time for the flags! */
+
+pride-gradient[flag="pride"] {
 	background: linear-gradient(90deg in oklch, #f35b57, #f7a451, #f3da55,  #8fd860, #7093ff, #be7dff);
 }
 
-pride-gradient[data-flag="transgender"], .trans {
+pride-gradient[flag="transgender"], .trans {
 	background: linear-gradient(90deg in oklch, #5bcefa, #f5a9b8, #fff,  #f5a9b8, #5bcefa);
 }
 
-pride-gradient[data-flag="transfem"] {
+pride-gradient[flag="transfem"] {
 	background: linear-gradient(90deg in oklch, #5bcefa, #f7dae6, #f7afcf, #f688b9, #f7afcf, #f7dae6, #5bcefa);
 }
 
-pride-gradient[data-flag="enby"] {
+pride-gradient[flag="enby"] {
 	background: linear-gradient(90deg in oklch, #FFF433, #FFF8E7, #9B59D0,  #7f7f7f);
 }
 
-pride-gradient[data-flag="robotkin"] {
-	background: linear-gradient(90deg in oklch, #fff, #f21c00, #53ee00,  #3b8aff, #7f7f7f);
+pride-gradient[flag="robotkin"] {
+	background: linear-gradient(90deg in oklch, #fff, #f21c00, #53ee00, #3b8aff, #7f7f7f);
 }
 
-pride-gradient[data-flag="aroace"] {
+pride-gradient[flag="robotkin-stepped"] {
+	background: linear-gradient(90deg in oklch, #fff 0 14%, #f21c00 14% 40%, #53ee00 40% 62%, #3b8aff 62% 85%, #979797 85% 100%);
+}
+
+pride-gradient[flag="aroace"] {
 	background: linear-gradient(90deg in oklch, #da8b00, #e8cc00, #ffffff,  #6fafdf, #5482ca);
 }
 
-pride-gradient[data-flag], .trans {
+pride-gradient[flag="plural"] {
+	background: linear-gradient(90deg in oklch, #7e4b77, #d19ef3, #8784c9,  #9ac3b0, #f2edb9);
+}
+
+pride-gradient[flag], .trans {
 	background-clip: text;
 	color: transparent;
+;
 }
 
 .buttons img, .buttons {
@@ -75,6 +89,12 @@ pride-gradient[data-flag], .trans {
 
 .comment, small {
 	opacity: 0.7;
+}
+
+
+code {
+	border: 1px solid;
+	padding: 1px 2px;
 }
 
 .home {

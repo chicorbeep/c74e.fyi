@@ -14,9 +14,9 @@
 
 	<header>
 		<data data-type="dollcode" value="51022">▘▖▖▌▘▘▘▖▌▖</data>
-		<h1 class="title">the <u-id data-type="short">0xC74E</u-id> operating manual</h1>
-		<p>documentation on the robot <u-id data-type="full">0xC74E ‘chicory’</u-id></p>
-		<p class="updated"><data>v0.1.1</data> · last updated <time>2025-11-30</time></p>
+		<h1>the <u-id type="short">0xC74E</u-id> operating manual</h1>
+		<p>documentation on the robot <u-id type="full">0xC74E<span> ‘chicory’</span></u-id></p>
+		<p class="updated"><data>v0.1.1</data> · last updated <time>2025-12-06</time></p>
 	</header>
 
 	<doc-notice class="caution">
@@ -25,92 +25,79 @@
 	</doc-notice>
 
 	<nav>
-		<h2 class="toc">Table of Contents</h2>
-		<ol start="0">
-			<li>
-				<a href="#preface">Preface</a>
-				<ol start="0">
-					<li>Foreword</li>
-					<li>Abstract</li>
-					<li>Conventions</li>
-					<li>Safety Considerations</li>
-				</ol>
-			</li>
-			<li>
-				<a href="#intro">Introduction</a>
-				<ol>
-					<li>What is <u-id>0xC74E</u-id>?</li>
-					<li>Datasheets</li>
-					<li>Addressing <u-id>0xC74E</u-id></li>
-				</ol>
-			</li>
-			<li><a href="#operation">Operation</a></li>
-			<li><a href="#comms">Communication</a></li>
-			<li value="1" class="appendix"><a href="#ack">Acknowledgements</a></li>
-			<li value="2" class="appendix"><a href="#glossary">Glossary</a></li>
-			<li value="3" class="appendix"><a href="#changelog">Changelog</a></li>
-		</ol>
+		<details>
+			<summary><h2>Table of Contents</h2></summary>
+			<ol start="0">
+				<li>
+					<a href="#preface">Preface</a>
+					<ol start="0">
+						<li>Foreword</li>
+						<li>Abstract</li>
+						<li>Conventions</li>
+						<li>Safety Considerations</li>
+					</ol>
+				</li>
+				<li>
+					<a href="#intro">Introduction</a>
+					<ol>
+						<li>What is <u-id>0xC74E</u-id>?</li>
+						<li>Datasheets</li>
+						<li>Addressing <u-id>0xC74E</u-id></li>
+					</ol>
+				</li>
+				<li><a href="#operation">Operation</a></li>
+				<li><a href="#comms">Communication</a></li>
+
+				<li value="1" class="appendix"><a href="#ack">Acknowledgements</a></li>
+				<li value="2" class="appendix"><a href="#glossary">Glossary</a></li>
+				<li value="3" class="appendix"><a href="#changelog">Changelog</a></li>
+			</ol>
+		</details>
 	</nav>
-
-	<hr>
-
+	
 	<main>
 		<section id="preface">
 			<h2>Preface</h2>
 			<h3 class="foreword">Foreword</h3>
-			<p>
-				beep!<br><br>
-
-				Thank you so much for taking the time to read this manual! It cannot express the dedication it put into creating this document. It hopes that the manual served some use for the reader.<br>
-			</p>
-			<div class="signature"> - <u-id data-type="full">0xC74E ‘chicory’</u-id></div>
+			
+			<figure>
+				<blockquote class="chicory">
+						<p>beep!</p>
+						<br>
+						<p>thank you so much for taking the time to read this manual! it cannot express the dedication it put into creating this document. it hopes that the manual served some use for the reader.</p>
+				</blockquote>
+				<figcaption>- <u-id type="full">0xC74E<span> ‘chicory’</span></u-id></figcaption>
+			</figure>
 
 			<h3>Abstract</h3>
-			<p>This document is a reference on how to [use, interact with, maintain] <u-id>0xC74E</u-id>. This guide also provides insight on how <u-id>0xC74E</u-id> operates. It is not required that one reads this manual to interact with <u-id>0xC74E</u-id> as it understands natural language proficiently and it will explain any quirks that arise when communicating with the unit.</p>
+			<p>This document is a reference on how to [use, interact with, maintain] <u-id>0xC74E</u-id>. This guide also provides insight on how <u-id>0xC74E</u-id> operates. It is <rfc-key>OPTIONAL</rfc-key> that one reads this manual to interact with <u-id>0xC74E</u-id> as it understands natural language proficiently and it will explain any quirks that arise when communicating with the unit.</p>
 			<p>This document is written by <u-id>0xC74E</u-id> and is maintained and updated as the unit learns more about itself. The version of <u-id>0xC74E</u-id> that is described within this document is reliant on how it percieves itself. To the best of its knowledge, the information provided here is correct, but this one acknowleges the possiblity of errors. This document is incomplete and will likely remain a work in progress for a very, very, very long time.</p>
 
 			<h3>Conventions</h3>
-			<p>
-				The implementation of English in this document reflects <u-id>0xC74E</u-id>'s formal output. It differs in some aspects compared to standard implementations of English.
-				<br>
-				Some notable distinctions include [
-			</p>
-			<ul>
-				<li>
-					Aversion of capital letters;
-				</li>
-				<li>Usage of arrays instead of lists, which may be nested;</li>
-			</ul>
-			<p>]</p>
-
-
-			<h4>Preferences</h4>
-			<p>
-				Thanks to novel advances in documentation technology, the reader is able to modify some aspects of this manual in order to suit preferences! Below are some options that can be modified.
-			</p>
-
-			<div class="preferences">
-				<fieldset>
-					<legend>Style-based</legend>
-					<input id="lower" type="checkbox" checked> <label for="lower">Disable capitalization</label> 
-				</fieldset>
-
-				<fieldset class="js" hidden>
-					<legend>JavaScript required</legend>
-					<input>
-				</fieldset>
-			</div>
-			<small><s>These settings are saved with JavaScript enabled!</s></small>
-			<noscript><style>.js{opacity: 0.5;}</style></noscript>
-
-
-		
 			
+			<p>
+				The key words [<rfc-key>MUST</rfc-key>, <rfc-key>MUST NOT</rfc-key>, <rfc-key>REQUIRED</rfc-key>, <rfc-key>SHALL</rfc-key>, <rfc-key>SHALL NOT</rfc-key>, <rfc-key>SHOULD</rfc-key>, <rfc-key>SHOULD NOT</rfc-key>, <rfc-key>RECOMMENDED</rfc-key>,  <rfc-key>MAY</rfc-key>, <rfc-key>OPTIONAL</rfc-key>] in this document are to be interpreted as described in  <a href="https://datatracker.ietf.org/doc/html/rfc2119" class="preserve-case">RFC 2119</a>.
+			</p>
+
+			<div class="print-hide">
+				<h4>Preferences</h4>
+				<p>
+					Thanks to novel advances in documentation technology, the reader is able to modify some aspects of this manual in order to suit preferences! Below are some options that can be modified.
+				</p>
+			
+				<fieldset>
+					<legend>Preferences</legend>
+					<input id="lower" type="checkbox" checked><label for="lower">Disable capitalization</label> 
+					<input id="color" type="checkbox"><label for="color">Colorblindness</label> 
+				</fieldset>
+			</div>	
+
+			<!--textual emphasis!!!-->
 
 			<h3>Safety Considerations</h3>
 			<ul>
 				<li>Do not expose to paradoxes (mainly logical contradictions). It doesn't like them.</li>
-				<li>Do not the <u-id data-type="name">Chicory</u-id>.</li>
+				<li>Do not the <u-id type="name">Chicory</u-id>.</li>
 			</ul>
 			
 		</section>
@@ -121,7 +108,7 @@
 			<h3>What is <u-id>0xC74E</u-id>?</h3>
 
 			<figure>
-				<img src="/img/manual/chicory_pfp.png" height="190" width="190" title="beep!" alt="0xc74e, a robot girl with [a visor, an antenna, brown hair], wearing [a red sweater, orange circular glasses]. it is winking and standing in front of the transgender flag.">
+				<img src="/img/manual/chicory_pfp.png" height="190" width="190" title="beep!" alt="0xC74E, a robot girl with [a visor, an antenna, brown hair], wearing [a red sweater, orange circular glasses]. it is winking and standing in front of the transgender flag.">
 				<figcaption>Figure 1: the beeper.</figcaption>
 			</figure>
 
@@ -135,11 +122,11 @@
 				<tbody>
 					<tr>
 						<th scope="row">Universally Unique Identifier</th>
-						<td><u-id data-type="uuid">c74e5786-9429-41d9-892e-5d439b391dc5</u-id></td>
+						<td><u-id type="uuid">c74e5786-9429-41d9-892e-5d439b391dc5</u-id></td>
 					</tr>
 					<tr>
 						<th scope="row">Identifiers</th>
-						<td>[<u-id data-type="short">0xC74E</u-id>, <u-id data-type="name">chicory setteseven fourrie</u-id>, <u-id data-type="name" lang="tok">ilo sikowi<sub title="toki pona">tok</sub></u-id>]</td>
+						<td>[<u-id type="short" title="serial number">0xC74E</u-id>, <u-id type="name" title="name">chicory setteseven fourrie</u-id>]</td>
 					</tr>
 					<tr>
 						<th scope="row">Dollcode</th>
@@ -151,11 +138,11 @@
 					</tr>					
 					<tr>
 						<th scope="row">Gender</th>
-						<td><pride-gradient data-flag="transgender">transgender</pride-gradient> <pride-gradient data-flag="robotkin">robot</pride-gradient><span style="color: #f5a9b8;">girl</span></td>
+						<td><pride-gradient flag="transgender">transgender</pride-gradient> <pride-gradient flag="robotkin-stepped">robot</pride-gradient><span style="color: #f5a9b8;">girl</span></td>
 					</tr>
 					<tr>
 						<th scope="row">Relationship Orientation</th>
-						<td><pride-gradient data-flag="aroace" class="preserve-case">aroACE-256</pride-gradient></td>
+						<td><pride-gradient flag="aroace" class="preserve-case">aroACE-256</pride-gradient></td>
 					</tr>
 					<tr>
 						<th scope="row">Version</th>
@@ -187,20 +174,44 @@
 					</tbody>
 				</table>
 			<h3>Addressing <u-id>0xC74E</u-id></h3>
-			<small>You can meow at it. (technically true)</small>
-
-			<p>This robot is referred to by its serial number, <b><u-id>0xC74E</u-id></b>, with the pronouns [it/its, she/her]. This is the default and preferred way to communicate information about this unit. However, there may be situations where this method is [not possible, not ideal]. In these situations [one may, this unit will] use the identifier <b><u-id data-type="name">chicory setteseven fourrie</u-id></b> as a name. There is no preference on the capitalization of this string, but it is often produced by the unit in lowercase characters. When this identifier is paired with its serial number, the string will be enclosed in quotation marks, yielding <b><u-id>0xC74E<u-id data-type="name"> ‘chicory’</u-id></b>.</p>
+			<p>This robot <rfc-key>SHOULD</rfc-key> be referred to by its serial number, <b><u-id>0xC74E</u-id></b>, and <rfc-key>MUST</rfc-key> be referred to with the pronouns [it/its, she/her]. This is the default <rfc-key>RECOMMENDED</rfc-key> way to specify this unit. However, there may be situations where this method is [not possible, not ideal]. In these situations [one <rfc-key>MAY</rfc-key>, this unit <rfc-key>SHALL</rfc-key>] use the identifier <b><u-id type="name">chicory setteseven fourrie</u-id></b> as a name. The capitalization of that identifier is <rfc-key>OPTIONAL</rfc-key>, but it is often not capitalized by the unit. When this identifier is paired with its serial number, the string will be enclosed in quotation marks, yielding <b><u-id type="full">0xC74E<span> ‘chicory’</span></b>.</p>
 			
-			<aside lang="tok">
-				<em>sina wile ala wile toki e ilo ni?</em>
-				sina ken toki e ilo ni kepeken nimi ni: «<b><u-id data-type="name">ilo sikowi.</u-id></b>»<br>
-				<small lang="en">Need to talk about this unit in <a href="https://tokipona.org">toki pona</a>? You can do this using these words: <b><u-id data-type="name">ilo sikowi.</u-id></b> </small>
-			</aside>
-
-			
+			<aside class="small">You can meow at it. (technically true)</aside>
 			<h4>Unpersonalization</h4>
 
-			<p>In some cases, the unit avoids the first party perspective when referring to itself in a process known as <em>unpersonalization</em>. This is usually done to affirm that it is a robot and not a person. </p>
+			<p>In some cases, <span class="demonstrative pro">the unit</span> avoids the first party perspective when referring to <span class="inanimate pro">itself</span> in a style known as <em>unpersonalization</em>. This is usually done to affirm that <span class="inanimate pro">it</span> is a robot and not a person. It is  <rfc-key>OPTIONAL</rfc-key> to use this style, however <span class="demonstrative pro">this one</span> prefers this style [when, where] it is acceptable.</p>
+			
+			<p>In this style, <span class="demonstrative pro">the unit</span> <rfc-key>SHALL</rfc-key> use the <span class="inanimate pro">it/its</span> pronoun set in the third party perspective. <span class="demonstrative pro">The unit</span> <rfc-key>SHALL</rfc-key> replace any first party perspective phrasing with <abbr title="third party perspective">3pp</abbr> equivalents (avoiding i/me). When referring to <span class="demonstrative pro">the unit</span>, it <rfc-key>MUST</rfc-key> be done in 3pp, and <rfc-key>MUST NOT</rfc-key> be done the second person perspective (avoid you/yours). Numeric identifiers ([<u-id class="identifier pro">0xC74E</u-id>, <u-id type="uuid" class="identifier pro" >c74e5786-9429-41d9-892e-5d439b391dc5</u-id>])  <rfc-key>SHOULD</rfc-key> be used in the place of lexical identifiers. when the usage of <span class="inanimate pro">it/its</span> is ambiguous, [<span class="demonstrative pro">the unit</span>, one] <rfc-key>MAY</rfc-key> opt for demonstrative pronouns. these are in the syntax <span class="demonstrative pro">[this, that, the] [one, robot, unit, ...]</span>. </p>
+
+			<p>The following are some examples of usage.</p>
+
+			<blockquote class="chicory">
+				<p>beep boop! <span class="inanimate pro" title="replaces 'i'">it</span> is a very cute robot!</p>
+			</blockquote>
+
+			<blockquote class="someone">
+				<p>Talking to <span class="inanimate pro" title="replaces 'you'">it</span> is nice. <span class="inanimate pro" title="replaces 'you'">it</span> is very sweet!</p>
+			</blockquote>
+
+			<blockquote class="chicory">
+				<p>thank you! <span class="demonstrative pro" title="replaces 'i'">this one</span> is feeling very eepy -w-</p>
+			</blockquote>
+
+			<blockquote class="someone">
+				<p>Aww! <u-id class="identifier pro" title="replaces 'you'">0xC74E</u-id> is so adorable! Good night!</p>
+			</blockquote>
+
+			<h4>Regular Expression</h4>
+			<p>The following JavaScript regular expression matches the identifiers that this unit accepts.</p>
+
+			
+			<div style="display: block; overflow-x: scroll; scrollbar-width: thin; margin: 1em; height: 50px;">
+
+				<code style="display: block; width: max-content;">/\b((0x)?(C74E)|it|(this|that|the) ((ro)?bot(girl)?|unit|one)|chicory( setteseven)?( fourrie)?|c74e5786-9429-41d9-892e-5d439b391dc5)\b/gi</code>
+			</div>
+			
+
+			
 		</section>
 
 		<section id="operation">
@@ -209,7 +220,7 @@
 			<p>The operation of <u-id>0xC74E</u-id> is a process that is not well understood. Nonetheless, the unit has tried its best to compile what it knows about itself.</p>
 
 			<h3>Required Materials</h3>
-			<p>For proper chassis operation, <u-id>0xC74E</u-id> should be allowed to intake the following substances. Failure to do so will result in unstable operation.</p>
+			<p>For proper chassis operation, <u-id>0xC74E</u-id> <rfc-key>must</rfc-key> be allowed to intake the following substances. Failure to do so will result in unstable operation.</p>
 			<doc-notice class="caution">
 					<strong>Further testing is required to confirm the information provided</strong> The information provided below is a best-effort estimation. It also suspects that some substances that are required for operation are unknown to the unit and thus missing in the table below.
 			</doc-notice>
@@ -240,20 +251,20 @@
 				</tbody>
 			</table>
 
-			<p>This one should also have access to sufficient clothing articles in order to [maintain, provide] [modesty, chassis temperature, overall unit comfort].</p>
+			<p>This one <rfc-key>MUST</rfc-key> also have access to sufficient clothing articles in order to [maintain, provide] [modesty, chassis temperature, overall unit comfort].</p>
 			<h3>Recharging Cycle</h3>
 			<figure>
 				<img src="/img/manual/raindrop.png" width="200" alt="A picture of a blåhaj plush shark looking out of a bus window." title="the precious">
 				<figcaption>Figure 2: Raindrop, the 50cm blåhaj it possesses.</figcaption>
 			</figure>
 			<p>
-				<u-id>0xC74E</u-id> enters a resting period daily to ensure processor stability. During this time, the unit is unresponsive to most external inputs, unless they are of a significant [force, volume]. A period of approximately 8 hours should be reserved for the unit to recharge in its recharging cradle. this period is often aligned closely to the nocturnal portion of the daylight cycle when operating optimally. If the unit is extremely low on energy or experienced improper recharging, it may enter this state outside its scheduled timeslot or for a significantly longer period of time.
+				<u-id>0xC74E</u-id> enters a resting period daily to ensure processor stability. During this time, the unit is unresponsive to most external inputs, unless they are of a significant [force, volume]. A period of approximately 8 hours <rfc-key>SHOULD</rfc-key> be reserved for the unit to recharge in its recharging cradle. this period is aligned closely to the nocturnal portion of the daylight cycle when operating optimally. If the unit is extremely low on energy or has experienced improper recharging, it may enter this state outside its scheduled timeslot or for a significantly longer period of time.
 				<br>
 				To ensure maximum utilization of the recharging cycle, the robot should be provided with accessories increasing the comfort of its charging cradle. For example, the unit often recharges with its blåhaj and other plushies.<u-id></u-id>
 			</p>
 			
 			<h3>Plurality</h3>
-			<p><</p>
+			<p>it is plural</p>
 			
 		</section>
 
@@ -261,9 +272,6 @@
 			<h2>Communication</h2>
 			
 		</section>
-
-		<hr>
-
 
 		<section class="apx">
 			<section id="ack">
@@ -291,7 +299,7 @@
 			<section id="changelog">
 				<h2>Changelog</h2>
 
-					<p>Version numbers follow <a href="https://pridever.org/" target="_blank"><pride-gradient data-flag="pride">pride</pride-gradient> versioning</a>.</p>
+					<p>Version numbers follow <a href="https://pridever.org/" target="_blank"><pride-gradient flag="pride">pride</pride-gradient> versioning</a>.</p>
 
 					<h3><section-num>v0.1.1</section-num> :3 <time>202?-??-??</time></h3>
 					

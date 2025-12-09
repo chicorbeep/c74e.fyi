@@ -11,9 +11,12 @@
 	.about-window {
 		border: 1px solid;
 		padding: 8px;
+		position: relative;
 		display: flow-root;
 		max-width: 640px;
 		margin: 16px 0 0 auto;
+		background: gray;
+		z-index: -2;
 	}
 
 		.titlebar {
@@ -30,10 +33,20 @@
 		padding-left: 4px;
 	}
 
-	.about-window > img {
+	.about-window > .chicory {
 		float: left;
 		image-rendering: pixelated;
-		margin: -8px 8px -100px -8px;
+		margin: -8px -8px -24px -8px;
+
+	}
+
+	.bg {
+		position: absolute;
+		z-index: -1;
+		height: 300px;
+		width: 200px;
+		background-color: rgb(91, 164, 228);
+		margin: -8px;
 	}
 
 	.about-window  :is(h2, p) {
@@ -101,11 +114,12 @@
 			<span>about 0xC74E</span> 
 
 		</div>
-		<img src="/img/placeholder.png" alt="chicory! it's smiling while sitting on the window frame" width="200" height="400">
+		<div class="bg"></div>
+		<img class="chicory" src="/img/art/suwi.png" alt="chicory! it's smiling while standing behind this window's frame" width="225" height="316">
 
 		<hgroup>
-			<h2><u-id>0xC74E</u-id> 'chicory' <span class="version">version 0.2.0</span></h2>
-			<p>made with love ♥ 2008 - 2026 Kasije Systems</p>
+			<h2><u-id>0xC74E</u-id> 'chicory' <span class="version">version 0.1.1</span></h2>
+			<p>made with love ♥ 2008 - 2026</p>
 		</hgroup>
 		<hr>
 		<p>it's a cute robot :3 awawawawawawa!</p>
