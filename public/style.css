@@ -127,6 +127,10 @@ pride-gradient[flag],
 			padding: 1px 1ch;
 			margin: -1px 1ch 0 0;
 			border: none;
+
+			&::after {
+				content: " ›";
+			}
 		}
 
 		& .decor {
