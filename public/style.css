@@ -1,3 +1,9 @@
+
+:root {
+
+	scrollbar-color: #ffbc407f transparent;
+}
+
 body {
 	background: center/1px 4px linear-gradient(#1d050e 50%, #350114 50%);
 
@@ -9,6 +15,7 @@ body {
 	padding: 0;
 	margin: 0;
 	max-width: none;
+	
 }
 
 
@@ -122,10 +129,10 @@ pride-gradient[flag],
 
 		& .breadcrumb {
 			float: left;
-			background-color: #c06;
+
 			color: #fab;
-			padding: 1px 1ch;
-			margin: -1px 1ch 0 0;
+			padding: 1px 0.5ch;
+			margin: -1px 0 0 0;
 			border: none;
 
 			&::after {
