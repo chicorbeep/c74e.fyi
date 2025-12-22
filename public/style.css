@@ -8,7 +8,7 @@ body {
 	background: center/1px 4px linear-gradient(#1d050e 50%, #350114 50%);
 
 	color: white;
-	font-family: "Cozette", "Atkinson Hyperlegible Next", sans-serif;
+	font-family: "Cozette", "Atkinson Hyperlegible Next", sans-serif, "Adwaita Sans";
 	margin: auto;
 	color-scheme: dark;
 	box-sizing: border-box;

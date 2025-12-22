@@ -13,8 +13,9 @@ body {
 	background: var(--background);
 	color: var(--text-color);
 	line-height: 1.7;
-	max-width: 960px;
+	max-width: calc(960px + 4em);
 	margin: auto;
+	padding: 0 2em;
 	font-family: "Atkinson Hyperlegible Next", sans-serif;
 
 	&:has(#lower:checked) {
@@ -69,7 +70,8 @@ body {
 }
 
 .nav-banner {
-	width: 960px;
+	max-width: 960px;
+	width: unset;
 	margin: 4px 0 1em;
 }
 
