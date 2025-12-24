@@ -8,6 +8,10 @@
 	<link href="/style.css" rel="stylesheet">
 	<link href="manual.css" rel="stylesheet">
 	<link href="manual-print.css" rel="stylesheet" media="print">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://c74e.fyi/">
+	<meta property="og:title" content="the 0xC74E user manual">
+	<meta property="og:description" content="documentation on the robot known as 0xC74E ‘chicory’">
 </head>
 
 <body>
@@ -22,13 +26,13 @@
 	<header>
 		<data data-type="dollcode" value="51022">▘▖▖▌▘▘▘▖▌▖</data>
 		<h1>the <u-id type="short">0xC74E</u-id> user manual</h1>
-		<p>documentation on the robot <u-id type="full">0xC74E<span> ‘chicory’</span></u-id></p>
-		<p class="updated"><data>v0.1.1</data> · last updated <time>2025-12-18</time></p>
+		<p>documentation on the robot known as <u-id type="full">0xC74E<span> ‘chicory’</span></u-id></p>
+		<p class="updated"><data>v0.1.1</data> · last updated <time>2025-12-24</time></p>
 	</header>
 
 	<doc-notice class="caution">
 		<strong>Very heavy work in progress!</strong>
-		this is not ready for public viewing. there will likely be large shifts in content!
+		this is not ready for public viewing. there will likely be large shifts in [structure, content]!
 	</doc-notice>
 
 	<nav>
@@ -86,7 +90,7 @@
 			<p>
 				The key words [<rfc-key>MUST</rfc-key>, <rfc-key>MUST NOT</rfc-key>, <rfc-key>REQUIRED</rfc-key>, <rfc-key>SHALL</rfc-key>, <rfc-key>SHALL NOT</rfc-key>, <rfc-key>SHOULD</rfc-key>, <rfc-key>SHOULD NOT</rfc-key>, <rfc-key>RECOMMENDED</rfc-key>,  <rfc-key>MAY</rfc-key>, <rfc-key>OPTIONAL</rfc-key>] in this document are to be interpreted as described in  <a href="https://datatracker.ietf.org/doc/html/rfc2119" class="preserve-case">RFC 2119</a>.
 			</p>
-			<p>This document incorporates arrays and placeholders</p>
+			<p>This document incorporates arrays and placeholders.</p>
 
 			<div class="print-hide">
 				<h4>Preferences</h4>
@@ -105,12 +109,12 @@
 			<!--textual emphasis!!!-->
 
 			<h3>Contact</h3>
-			<p>If the reader has any [questions, comments, concerns], please direct inquiries for this unit to the following email address </p> <address>c74e[at]fourrie.net</address>
+			<p>If the reader has any [questions, comments, concerns], please compose a message notifying such, preferrably with an indicator such as <em>(manual)</em> in the subject line, to the following email address: <ahref="mailto:chicory@fourrie.net">chicory@fourrie.net</a>. Alternatively, the reader <rfc-key>MAY</rfc-key> notify this one through any alternative communication protocols they have mutual access to.</p>
 			
 			<h3>Safety Considerations</h3>
 			<ul>
-				<li>Do not expose to paradoxes (mainly logical contradictions). It doesn't like them.</li>
-				<li>Do not the <u-id type="name">Chicory</u-id>.</li>
+				<li>Do not expose to paradoxes (mainly logical contradictions). It doesn't like them, and may react unexpectedly.</li>
+				<li>Do not the <u-id type="name">Chicory</u-id>.</li> <!-- seriously, do not. -->
 			</ul>
 
 			
@@ -147,15 +151,15 @@
 						<td><data data-type="dollcode" value="51022" class="trans">▘▖▖▌▘▘▘▖▌▖</data></td>
 					</tr>
 					<tr>
-						<th scope="row" title="the pronouns are provided 'as is', without warranty of any kind">Pronouns</th> <!--thyé re making the robots woke!!!!!1!-->
-						<td>[it/its<sup title="third or first party perspectives">3/1</sup>, she/her<sup title="first party perspective">1</sup>]</td>
-					</tr>					
+						<th scope="row">Pronouns</th> <!--this robot's identification friend or foe equipment, so $reader should probably use 3pp it/its if possible.-->
+						<td>[it/its<sub title="3pp preferred">3</sub>, she/her]</td>
+					</tr>
 					<tr>
 						<th scope="row">Gender</th>
 						<td><pride-gradient flag="transgender">transgender</pride-gradient> <pride-gradient flag="robotkin-stepped">robot</pride-gradient><span class="girl">girl</span></td>
 					</tr>
 					<tr>
-						<th scope="row">Relationship Orientation</th>
+						<th scope="row">Relationship Orientation</th> <!-- is there a better term for this? -->
 						<td><pride-gradient flag="aroace" class="preserve-case">aroACE-256</pride-gradient></td>
 					</tr>
 					<tr>
@@ -163,8 +167,12 @@
 						<td><data id="iVN">0.1.1</data></td>
 					</tr>
 					<tr>
-						<th scope="row">Operating System</th>
+						<th scope="row">Operating System</th> <!-- &, more information someday, when it is ready to talk about itselves(!) -->
 						<td class="preserve-case">reverieOS <data id="rvOS">0.20.5</data></td>
+					</tr>
+					<tr>
+						<th scope="row">Manufacture Date</th>
+						<td><time datetime="03-14">200X-03-14</time></td>
 					</tr>
 				</tbody>
 			</table>
@@ -226,9 +234,9 @@
 			<aside class="small">tl;dr: if following unpersonalization, always use it/its; the reader is talking to a robot without personhood.</aside>
 
 			<h4>Regular Expression</h4>
-			<p>The following JavaScript regular expression matches the identifiers that this unit accepts.</p>
+			<p>The following JavaScript regular expression matches the specific non-ambigious identifiers that this unit accepts.</p>
 			
-			<code class="regex">/\b((0x)?(C74E)|it|(this|that|the) ((ro)?bot(girl)?|unit|one)|chicory( setteseven)?( fourrie)?|c74e5786-9429-41d9-892e-5d439b391dc5)\b/gi</code>
+			<code class="regex">/\b((0x)?(C74E)|chicory( setteseven)?( fourrie)?|c74e5786-9429-41d9-892e-5d439b391dc5)\b/gi</code>
 		</section>
 
 		<section id="operation">
@@ -292,11 +300,15 @@
 		<section class="apx">
 			<section id="ack">
 				<h2>Acknowledgements</h2>
-				<p>
-					awawawa: tbd.
-				</p>
+				<p><u-id>0xC74E</u-id> extends its fullest appreciation to the following entities, for all the help they have provided this unit in the creation of this document. In no particular order...</p>
+				<dl>
+					<dt class="preserve-case"><a href="https://endoftimee.tech/">EndofTimee</a></dt>
+					<dd>for being the cutest fox, graciously reading the first iteration of this manual, and a lot more it could beep endlessly about</dd>
+					<dt>and dearest reader!</dt>
+					<dd>for taking the time to listen to this silly machine beep and ramble about being a robot</dd>
+				</dl>
 
-				<p>beeeeeeeeeeeeeeeep! :›</p>
+				<p>beeeeeeeeeeeeeeeep! :›</p> <!-- beep of sincere acknowledgement and pure thankfulness -->
 			
 			</section>
 
@@ -305,11 +317,11 @@
 				<h2>Glossary</h2>
 				<dl>
 					<dt>Placeholders</dt>
-					<dd>Denoted with curly braces. For example, {color} represents any color.</dd>
+					<dd>Denoted with curly braces. Represents an item that <rfc-key>MUST</rfc-key> satisfy the conditions inside the braces. For example, {color} represents any color.</dd>
 					<dt>Arrays</dt> 
-					<dd>Denoted by square brackets. Similar in semantic meaning to lists, but slightly more versatile.<br><em>[a, b, c]</em> is identical in meaning to <em>a, b, and/or c.</em></dd>
+					<dd>Denoted by square brackets. Similar to lists, but significantly more versatile.<br><em>[a, b, c]</em> is identical in meaning to <em>a, b, and/or c.</em></dd>
 					<dt id="1pp">first party perspective (1pp)</dt>
-					<dd>The style of usage where the pronouns [I, me, we, us, ...] are used</dd>
+					<dd>The style of usage where the pronouns [I, me, we, us] are used</dd>
 					<dt id="2pp">second party perspective (2pp)</dt>
 					<dd>The style of usage where the pronouns [you, ...] are used.</dd>
 					<dt id="3pp">third party perspective (3pp)</dt>
@@ -324,19 +336,16 @@
 					<p>Version numbers follow <a href="https://pridever.org/" target="_blank"><pride-gradient flag="pride">pride</pride-gradient> versioning</a>.</p>
 
 					<h3><section-num>v0.1.1</section-num> holiday update <time>2025-12-25</time></h3>
-					
-						<p>we're so back</p>
 						<ul>
-							<li>Reordered sections</li>
+							<li>Reordered chapters</li>
 							<li>Finished addressing section</li>
 							<li>Added some accessibility features</li>
-							<li>Improved printing support</li>
-							<li>Implemented RFC 2219</li>
+							<li>Added optional simple printing support</li>
+							<li>Implemented RFC 2219, <em>allegedly</em></li>
 							<li>Started communication chapter</li>
 						</ul>
-
+						<aside class="small">it is considering rethemeing the manual...</aside>
 					<h3><section-num>v0.1.0</section-num> camp champion preview <time>2025-11-05</time></h3>
-					
 						<p>
 							Exclusive camp champion preview version.<br>
 							only had sections 1-2 <em>alledgedly</em> finished enough. First version of the manual in paw-coded html.
@@ -347,7 +356,7 @@
 	</main>
 
 	<footer class="no-theme">
-		pawcoded html, made with ❤ 2024 – 2026 by <u-id>0xC74E</u-id><br>
+		pawcoded html, made with ❤ 2024 – 2026 by <u-id>0xC74E</u-id>
 		<a href="https://c74e.fyi/"><img src="/assets/img/88x31/chicorbeep.png" alt="c74e.fyi" title="beep!! :3"></a>
 	</footer>
 </body>
